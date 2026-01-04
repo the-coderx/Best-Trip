@@ -1,6 +1,6 @@
 import { CarouselSpacing } from "@/components/Carouselcard";
+import { MapPin } from "lucide-react";
 import Image from "next/image";
-
 export default function Home() {
   const categories = [
     { label: "Hotels", icon: "/icons/hotel.png" },
@@ -9,6 +9,21 @@ export default function Home() {
     { label: "Flights", icon: "/icons/flight.png" },
     { label: "Flights+Hotel", icon: "/icons/flight.png" },
     { label: "Taxi", icon: "/icons/taxi.png" },
+  ];
+
+  const hotelData = [
+    {
+      image: "/images/img1.jpg",
+      heading: "Goa Beach Holiday",
+      subheading: "North Goa",
+      subheadingIcon: MapPin,
+      rating: 4.96,
+      reviewCount: 672,
+      badge: "6 Days",
+      features: "Hotels • Car • Guide • 8 Activities",
+      price: 19000,
+      priceUnit: "person",
+    },
   ];
   return (
     <>
@@ -36,7 +51,17 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <CarouselSpacing />
+      <CarouselSpacing
+        items={hotelData}
+        buttons={[
+          "All",
+          "Luxury",
+          "Standard",
+          "Villa",
+          "Cottage",
+          "Shared Spaces",
+        ]}
+      />
     </>
   );
 }
