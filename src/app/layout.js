@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="bg-red-600 w-full overflow-x-hidden ">
+    <html lang="en" className="w-full overflow-x-hidden ">
       <body className={`${plusJakartaSans.variable} w-full min-h-screen overflow-x-hidden`}>
         <SidebarProvider defaultOpen={false}>
           <AppSidebar />

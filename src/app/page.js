@@ -1,4 +1,5 @@
 import { CarouselSpacing } from "@/components/Carouselcard";
+import { ImageCarousel } from "@/components/ImageCarousel";
 import { MapPin } from "lucide-react";
 import Image from "next/image";
 export default function Home() {
@@ -25,6 +26,8 @@ export default function Home() {
       priceUnit: "person",
     },
   ];
+
+  const images = ["/images/img1.jpg", "/images/img1.jpg", "/images/img1.jpg"];
   return (
     <>
       <div className="w-full h-[75px] px-3 bg-[#FFF0E4]/80 py-4">
@@ -62,6 +65,7 @@ export default function Home() {
           "Shared Spaces",
         ]}
       />
+      <ImageCarousel images={images} />
     </>
   );
 }
