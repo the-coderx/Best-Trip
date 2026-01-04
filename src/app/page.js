@@ -1,5 +1,7 @@
 import { CarouselSpacing } from "@/components/Carouselcard";
 import { ImageCarousel } from "@/components/ImageCarousel";
+import PopularCities from "@/components/PopularCities";
+import FlightOffers from "@/components/FlightOffers";
 import { MapPin } from "lucide-react";
 import Image from "next/image";
 export default function Home() {
@@ -65,7 +67,12 @@ export default function Home() {
           "Shared Spaces",
         ]}
       />
+            <FlightOffers />
+
+       {/* Popular Cities section */}
+      <PopularCities />
       <ImageCarousel images={images} />
+     
     </>
   );
 }
