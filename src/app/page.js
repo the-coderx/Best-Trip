@@ -3,6 +3,7 @@ import { ImageCarousel } from "@/components/ImageCarousel";
 import PopularCities from "@/components/PopularCities";
 import FlightOffers from "@/components/FlightOffers";
 import PromoCards from "@/components/Promocard";
+import SearchHotel from "@/components/SearchHotel";
 import { MapPin } from "lucide-react";
 import Image from "next/image";
 export default function Home() {
@@ -94,6 +95,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex justify-end mt-[10px] mr-[40px]">
+        <SearchHotel />
         <PromoCards />
       </div>
       <div className="-mt-35">
@@ -108,10 +110,12 @@ export default function Home() {
             "Shared Spaces",
           ]}
         />
+        {/* Popular Cities section */}
+            <PopularCities />
             <FlightOffers />
+            
 
-       {/* Popular Cities section */}
-      <PopularCities />
+       
       </div>
       <ImageCarousel images={images} />
      
