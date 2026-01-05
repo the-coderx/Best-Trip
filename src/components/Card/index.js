@@ -51,10 +51,11 @@ export function CardCompo({
             <SubheadingIcon className="w-4 h-4" />
             <span>{subheading}</span>
           </div>
-
-          <div className="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1.5 rounded-md w-fit">
-            {features}
-          </div>
+          {features && (
+            <div className="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1.5 rounded-md w-fit">
+              {features}
+            </div>
+          )}
 
           {/* PRICE + CTA */}
           <div className="flex items-center justify-between pt-[10px]">

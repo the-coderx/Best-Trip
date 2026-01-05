@@ -3,9 +3,9 @@ import { popularCities } from "./data";
 
 export default function PopularCities() {
   return (
-    <section className="w-full px-4 md:px-8 py-10">
+    <section className="w-full px-4 md:px-8 pb-6">
       {/* Heading */}
-        <div className="mb-8 text-left">
+        <div className="mb-8 text-center mx-auto max-w-fit">
         <h2 className="text-xl md:text-2xl font-bold text-gray-900">
             Our Hotel in Popular Cities
         </h2>
@@ -15,7 +15,7 @@ export default function PopularCities() {
         </div>
 
       {/* Cards */}
-      <div className="flex gap-4 overflow-x-auto scrollbar-hide">
+      <div className="flex gap-4 overflow-x-auto scrollbar-hide justify-center">
         {popularCities.map((city) => (
           <div
             key={city.name}
