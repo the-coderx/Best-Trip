@@ -14,28 +14,24 @@ export default function FlightOffers() {
   const showNavigation = flightOffers.length > 3;
 
   return (
-    <section className="w-full px-6 py-10">
+    <section className="w-full h-auto p-6 m-2">
       {/* Header */}
-      <div className="mb-8">
-        <h2 className="text-[32px] leading-[32px] font-bold">
+      <div className="h-[76px] w-full max-w-[417px] gap-[12px] flex flex-col mb-4">
+        <h1 className="font-poppins text-[32px] leading-[32px] font-bold">
           Flight Offer Deals
-        </h2>
-        <p className="mt-2 text-[#5A5A5A]">
+        </h1>
+        <span className="h-[32px] text-[#5A5A5A]">
           Competitive fares for your route-specific searches.
-        </p>
+        </span>
       </div>
 
       {/* Carousel */}
-      <Carousel className="w-full max-w-6xl">
+      <Carousel className="w-full max-w-7xl px-4 pb-6 pt-2 mx-auto">
         <CarouselContent>
           {flightOffers.map((offer, index) => (
-            <CarouselItem
-              key={index}
-              className="p-3 md:basis-1/2 lg:basis-1/4"
-            >
+            <CarouselItem key={index} className="p-2 md:basis-1/2 lg:basis-1/4">
               {/* CARD */}
               <div className="rounded-[20px] border border-gray-200 bg-white p-6 shadow-sm">
-                
                 {/* Airline */}
                 <div className="flex items-center gap-3 mb-6">
                   <Image
@@ -56,27 +52,19 @@ export default function FlightOffers() {
 
                 {/* Route */}
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-base font-semibold">
-                    {offer.from}
-                  </span>
+                  <span className="text-base font-semibold">{offer.from}</span>
 
                   <ArrowLeftRight className="w-5 h-5 text-gray-600" />
 
-                  <span className="text-base font-semibold">
-                    {offer.to}
-                  </span>
+                  <span className="text-base font-semibold">{offer.to}</span>
                 </div>
 
                 {/* Date */}
-                <p className="text-sm text-gray-600 mb-6">
-                  {offer.date}
-                </p>
+                <p className="text-sm text-gray-600 mb-6">{offer.date}</p>
 
                 {/* Bottom section - Economy and Price on same line */}
                 <div className="flex items-center justify-between mb-3">
-                  <p className="text-sm text-gray-600">
-                    Economy
-                  </p>
+                  <p className="text-sm text-gray-600">Economy</p>
                   <p className="text-base font-bold text-gray-900">
                     From ₹{offer.price.toLocaleString()}
                   </p>
@@ -88,7 +76,6 @@ export default function FlightOffers() {
                     Book Now
                   </Button>
                 </div>
-
               </div>
             </CarouselItem>
           ))}
@@ -97,8 +84,8 @@ export default function FlightOffers() {
         {/* Navigation */}
         {showNavigation && (
           <>
-            <CarouselPrevious className="size-10 -left-6 rounded-full border border-[#FF7A00] text-[#FF7A00] hover:bg-[#FFF0E4]" />
-            <CarouselNext className="size-10 -right-6 rounded-full border border-[#FF7A00] text-[#FF7A00] hover:bg-[#FFF0E4]" />
+            <CarouselPrevious className="size-8 -left-8" />
+            <CarouselNext className="size-8 -right-4" />
           </>
         )}
       </Carousel>

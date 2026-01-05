@@ -2,14 +2,14 @@ import { MapPin, CalendarDays, Users, Search } from "lucide-react";
 
 export default function SearchHotel() {
   return (
-    <section className="w-full px-6 py-8">
+    <section className="w-full px-6 py-8 m-2">
       {/* Heading */}
-      <h2 className="text-2xl font-bold mb-4">
+      <h1 className="text-2xl font-bold mb-4 text-[32px] leading-[32px] font-poppins">
         Search Hotel
-      </h2>
+      </h1>
 
       {/* Container */}
-      <div className="w-full rounded-2xl border border-gray-200 bg-white p-5">
+      <div className="w-[775px] h-[180px] rounded-2xl border border-gray-200 bg-white p-5">
         {/* Fields */}
         <div className="flex items-center justify-between mb-5">
           

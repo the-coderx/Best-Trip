@@ -2,8 +2,7 @@ export const popularCities = [
   {
     name: "Ahmedabad",
     hotels: 100,
-    image:
-      "https://images.unsplash.com/photo-1588416499018-d8c621c29c82?auto=format&fit=crop&w=800&q=80",
+    image: "/images/7d879c1b1267f22456ecdcb772ee78cdde63bb72.png",
   },
   {
     name: "Bengaluru",

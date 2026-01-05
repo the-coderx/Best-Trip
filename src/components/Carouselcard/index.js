@@ -19,13 +19,13 @@ export function CarouselSpacing({
   const showNavigation = items.length > 3;
   return (
     <div className="w-full h-[715px] m-2 p-6">
-      <div className="h-[76px] w-[417px] gap-[12px] flex flex-col">
+      <div className="h-auto w-full max-w-full gap-[12px] flex flex-col">
         <h1 className="font-poppins text-[32px] leading-[32px] font-bold">
-          {title || "Feature Hotel"}
+          {title}
         </h1>
-        <span className="h-[32px] text-[#5A5A5A]">
+        <span className="text-[#5A5A5A]">
           {description ||
-            "Quality as judged by customers. Book at the ideal price!"}
+            "Explore our most sought-after travel experiences around the world!"}
         </span>
       </div>
       <div className="flex gap-[10px] flex-wrap pt-2">
@@ -39,7 +39,7 @@ export function CarouselSpacing({
           </Button>
         ))}
       </div>
-      <Carousel className="w-full max-w-7xl px-6 pb-6 pt-2">
+      <Carousel className="w-full max-w-7xl px-6 pb-6 pt-2 mx-auto">
         <CarouselContent className="">
           {items.map((item, index) => (
             <CarouselItem key={index} className="p-2 md:basis-1/2 lg:basis-1/3">
