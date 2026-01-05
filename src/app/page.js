@@ -2,6 +2,7 @@ import { CarouselSpacing } from "@/components/Carouselcard";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import PopularCities from "@/components/PopularCities";
 import FlightOffers from "@/components/FlightOffers";
+import PromoCards from "@/components/Promocard";
 import { MapPin } from "lucide-react";
 import Image from "next/image";
 export default function Home() {
@@ -15,6 +16,42 @@ export default function Home() {
   ];
 
   const hotelData = [
+    {
+      image: "/images/img1.jpg",
+      heading: "Goa Beach Holiday",
+      subheading: "North Goa",
+      subheadingIcon: MapPin,
+      rating: 4.96,
+      reviewCount: 672,
+      badge: "6 Days",
+      features: "Hotels • Car • Guide • 8 Activities",
+      price: 19000,
+      priceUnit: "person",
+    },
+    {
+      image: "/images/img1.jpg",
+      heading: "Goa Beach Holiday",
+      subheading: "North Goa",
+      subheadingIcon: MapPin,
+      rating: 4.96,
+      reviewCount: 672,
+      badge: "6 Days",
+      features: "Hotels • Car • Guide • 8 Activities",
+      price: 19000,
+      priceUnit: "person",
+    },
+    {
+      image: "/images/img1.jpg",
+      heading: "Goa Beach Holiday",
+      subheading: "North Goa",
+      subheadingIcon: MapPin,
+      rating: 4.96,
+      reviewCount: 672,
+      badge: "6 Days",
+      features: "Hotels • Car • Guide • 8 Activities",
+      price: 19000,
+      priceUnit: "person",
+    },
     {
       image: "/images/img1.jpg",
       heading: "Goa Beach Holiday",
@@ -56,21 +93,26 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <CarouselSpacing
-        items={hotelData}
-        buttons={[
-          "All",
-          "Luxury",
-          "Standard",
-          "Villa",
-          "Cottage",
-          "Shared Spaces",
-        ]}
-      />
+      <div className="flex justify-end mt-[10px] mr-[40px]">
+        <PromoCards />
+      </div>
+      <div className="-mt-35">
+        <CarouselSpacing
+          items={hotelData}
+          buttons={[
+            "All",
+            "Luxury",
+            "Standard",
+            "Villa",
+            "Cottage",
+            "Shared Spaces",
+          ]}
+        />
             <FlightOffers />
 
        {/* Popular Cities section */}
       <PopularCities />
+      </div>
       <ImageCarousel images={images} />
      
     </>

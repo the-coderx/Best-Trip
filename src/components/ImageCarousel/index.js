@@ -16,7 +16,7 @@ export function ImageCarousel({ images = [] }) {
           {images.map((image, index) => (
             <CarouselItem key={index}>
               <div className="p-1">
-                <div className="relative w-full h-[340px]">
+                <div className="relative w-full h-[390px]">
                   <Image
                     src="/images/img2.png"
                     alt="Image"
